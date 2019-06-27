@@ -1,0 +1,40 @@
+{
+  "name": "reditor",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^4.3.2",
+    "styled-icons": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.22",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.16",
+    "parcel": "^1.12.3",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.5.2"
+  },
+  "scripts": {
+    "build": "yarn run build:es && yarn run build:lib",
+    "build:es": "npx rimraf es && tsc -m es2015 --outDir es",
+    "build:lib": "npx rimraf lib && tsc -m commonjs --outDir lib",
+    "start": "npx parcel ./demo/index.html -d demo/dist",
+    "clean": "npx rimraf dist es lib demo/dist"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,css,json,md,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
