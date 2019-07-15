@@ -1,8 +1,8 @@
-import { REditor } from '../src'
 import ReactDOM from 'react-dom'
 import React from 'react'
+import App from './App'
 
-ReactDOM.render(
-  <REditor />,
-  document.getElementById('app')
-)
+// IE
+import 'babel-polyfill'
+
+ReactDOM.render(<App />, document.getElementById('app'))
