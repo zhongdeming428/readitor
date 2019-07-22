@@ -13,9 +13,7 @@ npm i readitor -S
 
 ## Usage
 
-```sh
-npm run start
-```
+具体使用方法可以先参考 [demo](demo/App.tsx)
 
 ## Run tests
 
