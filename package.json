@@ -1,12 +1,23 @@
 {
 	"name": "readitor",
-	"version": "0.0.1",
+	"version": "0.0.2-rc",
 	"main": "lib/index.js",
 	"module": "es/index.js",
 	"license": "MIT",
+	"keywords": [
+		"rte",
+		"editor",
+		"react",
+		"typescript",
+		"rich text editor"
+	],
 	"dependencies": {
 		"styled-components": "^4.3.2",
 		"styled-icons": "^8.1.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zhongdeming428/readitor"
 	},
 	"devDependencies": {
 		"@babel/preset-env": "^7.4.5",
