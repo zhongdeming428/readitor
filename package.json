@@ -42,7 +42,8 @@
 		"build": "yarn run build:es && yarn run build:lib",
 		"build:es": "npx rimraf es && tsc -m es2015 --outDir es",
 		"build:lib": "npx rimraf lib && tsc -m commonjs --outDir lib",
-		"start": "npx parcel ./demo/index.html -d demo/dist",
+		"build:demo": "npx rimraf demo/dist && npx parcel build demo/index.html --public-url ./ -d demo/dist",
+		"start": "npx parcel ./demo/index.html -d dist",
 		"clean": "npx rimraf dist es lib demo/dist",
 		"test": "jest"
 	},
